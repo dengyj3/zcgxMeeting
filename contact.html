@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://www.cntestlab.com/2018/contract.html -->
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>联系我们_2019中国质量人大会官方网站</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/bootstrap-theme.css">
+  <link rel="stylesheet" href="./css/global.css">
+  <script src="./js/hm.js"></script>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/jquery.slide.js"></script>
+  <style>
+.panel-info>.panel-heading{color: rgb(255, 255, 255);background: rgb(0, 204, 255)}
+
+  </style>
+  <style type="text/css" abt="234"></style>
+  <script>//remove 17173 video ad
+doAdblock();
+function doAdblock(){
+    (function() {
+        function A() {}
+        A.prototype = {
+            rules: {
+                '17173_in':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_in_20150522.swf"
+                },
+                '17173_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_out_20150522.swf"
+                },
+                '17173_live':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_stream_20150522.swf"
+                },
+                '17173_live_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173.out.Live.swf"
+                }
+            },
+            _done: null,
+            get done() {
+                if(!this._done) {
+                    this._done = new Array();
+                }
+                return this._done;
+            },
+            addAnimations: function() {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            },
+            animationsHandler: function(e) {
+                if(e.animationName === 'playerInserted') {
+                    this.replace(e.target);
+                }
+            },
+            replace: function(elem) {
+                if(this.done.indexOf(elem) != -1) return;
+                this.done.push(elem);
+                var player = elem.data || elem.src;
+                if(!player) return;
+                var i, find, replace = false;
+                for(i in this.rules) {
+                    find = this.rules[i]['find'];
+                    if(find.test(player)) {
+                        replace = this.rules[i]['replace'];
+                        if('function' === typeof this.rules[i]['preHandle']) {
+                            this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                        }else{
+                            this.reallyReplace.bind(this, elem, find, replace)();
+                        }
+                        break;
+                    }
+                }
+            },
+            reallyReplace: function(elem, find, replace) {
+                elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                var b = elem.querySelector("param[name='movie']");
+                this.reloadPlugin(elem);
+            },
+            reloadPlugin: function(elem) {
+                var nextSibling = elem.nextSibling;
+                var parentNode = elem.parentNode;
+                parentNode.removeChild(elem);
+                var newElem = elem.cloneNode(true);
+                this.done.push(newElem);
+                if(nextSibling) {
+                    parentNode.insertBefore(newElem, nextSibling);
+                } else {
+                    parentNode.appendChild(newElem);
+                }
+            },
+            init: function() {
+                var handler = this.animationsHandler.bind(this);
+                document.body.addEventListener('webkitAnimationStart', handler, false);
+                document.body.addEventListener('msAnimationStart', handler, false);
+                document.body.addEventListener('oAnimationStart', handler, false);
+                document.body.addEventListener('animationstart', handler, false);
+                this.addAnimations();
+            }
+        };
+        new A().init();
+    })();
+}
+//remove baidu search ad
+if(document.URL.indexOf('www.baidu.com') >= 0){
+    if(document && document.getElementsByTagName && document.getElementById && document.body){
+        var aa = function(){
+            var all = document.body.querySelectorAll("#content_left div,#content_left table");
+            for(var i = 0; i < all.length; i++){
+                if(/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))){all[i].style.display= "none";all[i].style.visibility='hidden';}
+            }
+            all = document.body.querySelectorAll('.result.c-container[id="1"]');
+            //if(all.length == 1) return;
+            for(var i = 0; i < all.length; i++){
+                if(all[i].innerHTML && all[i].innerHTML.indexOf('广告')>-1){
+                    all[i].style.display= "none";all[i].style.visibility='hidden';
+                }
+            }
+        }
+        aa();
+        document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified',aa)
+    };
+}
+//remove sohu video ad
+if (document.URL.indexOf("tv.sohu.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+//remove 56.com video ad
+if (document.URL.indexOf("56.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+//fore iqiyi enable html5 player function
+if (document.URL.indexOf("iqiyi.com") >= 0){
+    if (document.cookie.indexOf("player_forcedType=h5_VOD")==-1){
+        document.cookie='player_forcedType=h5_VOD'
+        if(localStorage.reloadTime && Date.now() - parseInt(localStorage.reloadTime)<60000){
+            console.log('no reload')
+        }else{
+            location.reload()
+            localStorage.reloadTime = Date.now();
+        }
+    }
+}
+
+  </script>
+  <style type="text/css">
+    object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}
+  </style>
+</head>
+
+
+<body>
+<header class="wp-top">
+  <div class="wp-welcome">
+    <div class="wp-welcome-content">
+      <div class="wp-top-phone_login" id="web_topcontact">系统授权到期，请联系开发人员进行授权。</div>
+    </div>
+  </div>
+  <div class="subbanner"><a href="http://www.ticcollege.com/"></a></div>
+  <section id="guide">
+    <div class="nav">
+      <div class="container">
+        <ul>
+          <li><a href="http://www.ticcollege.com/meeting.html"><i class="glyphicon glyphicon-home"></i> 首页</a></li>
+          <li><a href="http://www.ticcollege.com/schedule.html"><i class="glyphicon glyphicon-calendar"></i>
+            日程安排</a></li>
+          <li><a href="http://www.ticcollege.com/hotel.html"><i class="glyphicon glyphicon-road"></i> 酒店交通</a></li>
+          <li><a href="http://www.ticcollege.com/meeting.docx"><i
+            class="glyphicon glyphicon-link"></i> 会议通知</a></li>
+          <!--<li><a href="http://www.cntestlab.com/user/help" target="_blank"><i class="glyphicon glyphicon-heart"></i>
+            参会流程</a></li>-->
+        </ul>
+      </div>
+    </div>
+  </section>
+  <br>
+  <style>
+.alert-success a:hover{
+	text-decoration:none;
+	}
+
+  </style>
+  <div class="container">
+  </div>
+  <div class="container">
+    <div class="row">
+      <!--mainbody-->
+      <div class="col-md-12" id="mainbody">
+        <section>
+          <h3>联系我们</h3>
+          <div class="content"><br>
+            <strong>会务组联系电话：010-65235812、82004360</strong><br>
+            <br>
+            参会联系人：小布、南歌<br>
+            <br>
+            手机：13718563261、17701221541<br>
+            <br>
+            赞助联系人：木青、希培<br>
+            <br>
+            手机：13810376576、18210105357<br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
+        </section>
+      </div>
+      <!--slidebar-->
+    </div>
+  </div>
+  <footer>
+    <div class="wp-footer mt-10">
+      <p style="color:#FFF; font-weight:normal; text-align:center; margin-top:10px; line-height:30px;">
+        <span id="web_botcontact">系统授权到期，请联系开发人员进行授权。</span>
+        <br>
+        Copyright © 2008 - 2018 ticcollege.com <br>
+        All Rights Reserved. 版权所有 京ICP备10019866号-4</p>
+      <div style="width:300px;margin:0 auto; padding:5px 0;">
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502030604"
+           style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
+          src="./image/jgwab.png" style="float:left;">
+          <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备
+            11010502030604号</p></a>
+      </div>
+
+    </div>
+
+  </footer>
+  <!--<script type="text/javascript">
+ function ainfo(vname){
+      RDATA=$.ajax({url:"/user/ajax?type="+vname,async:false});
+      $("#"+vname).html(RDATA.responseText);
+    }
+    ainfo('web_topcontact');
+    ainfo('web_botcontact');
+
+  </script>-->
+  <div class="hidden">
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9da8a7b253725bc8bb66a7c986b71cc4";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+
+    </script>
+  </div>
+
+</header>
+</body>
+</html>

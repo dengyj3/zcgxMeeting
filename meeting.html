@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://www.cntestlab.com/ -->
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>2019中国质量人大会</title>
+  <meta name="keywords" content="中国质量人大会">
+  <meta name="description" content="中国质量人大会">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/bootstrap-theme.css">
+  <link rel="stylesheet" href="./css/global.css">
+  <script src="./js/hm.js"></script>
+  <script src="./js/jquery.min.js"></script>
+  <style type="text/css" abt="234"></style>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/jquery.slide.js"></script>
+  <style>
+.panel-info>.panel-heading{color: rgb(255, 255, 255);background: rgb(0, 204, 255)}
+
+  </style>
+  <script>//remove 17173 video ad
+doAdblock();
+function doAdblock(){
+    (function() {
+        function A() {}
+        A.prototype = {
+            rules: {
+                '17173_in':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_in_20150522.swf"
+                },
+                '17173_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_out_20150522.swf"
+                },
+                '17173_live':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_stream_20150522.swf"
+                },
+                '17173_live_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173.out.Live.swf"
+                }
+            },
+            _done: null,
+            get done() {
+                if(!this._done) {
+                    this._done = new Array();
+                }
+                return this._done;
+            },
+            addAnimations: function() {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            },
+            animationsHandler: function(e) {
+                if(e.animationName === 'playerInserted') {
+                    this.replace(e.target);
+                }
+            },
+            replace: function(elem) {
+                if(this.done.indexOf(elem) != -1) return;
+                this.done.push(elem);
+                var player = elem.data || elem.src;
+                if(!player) return;
+                var i, find, replace = false;
+                for(i in this.rules) {
+                    find = this.rules[i]['find'];
+                    if(find.test(player)) {
+                        replace = this.rules[i]['replace'];
+                        if('function' === typeof this.rules[i]['preHandle']) {
+                            this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                        }else{
+                            this.reallyReplace.bind(this, elem, find, replace)();
+                        }
+                        break;
+                    }
+                }
+            },
+            reallyReplace: function(elem, find, replace) {
+                elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                var b = elem.querySelector("param[name='movie']");
+                this.reloadPlugin(elem);
+            },
+            reloadPlugin: function(elem) {
+                var nextSibling = elem.nextSibling;
+                var parentNode = elem.parentNode;
+                parentNode.removeChild(elem);
+                var newElem = elem.cloneNode(true);
+                this.done.push(newElem);
+                if(nextSibling) {
+                    parentNode.insertBefore(newElem, nextSibling);
+                } else {
+                    parentNode.appendChild(newElem);
+                }
+            },
+            init: function() {
+                var handler = this.animationsHandler.bind(this);
+                document.body.addEventListener('webkitAnimationStart', handler, false);
+                document.body.addEventListener('msAnimationStart', handler, false);
+                document.body.addEventListener('oAnimationStart', handler, false);
+                document.body.addEventListener('animationstart', handler, false);
+                this.addAnimations();
+            }
+        };
+        new A().init();
+    })();
+}
+//remove baidu search ad
+if(document.URL.indexOf('www.baidu.com') >= 0){
+    if(document && document.getElementsByTagName && document.getElementById && document.body){
+        var aa = function(){
+            var all = document.body.querySelectorAll("#content_left div,#content_left table");
+            for(var i = 0; i < all.length; i++){
+                if(/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))){all[i].style.display= "none";all[i].style.visibility='hidden';}
+            }
+            all = document.body.querySelectorAll('.result.c-container[id="1"]');
+            //if(all.length == 1) return;
+            for(var i = 0; i < all.length; i++){
+                if(all[i].innerHTML && all[i].innerHTML.indexOf('广告')>-1){
+                    all[i].style.display= "none";all[i].style.visibility='hidden';
+                }
+            }
+        }
+        aa();
+        document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified',aa)
+    };
+}
+//remove sohu video ad
+if (document.URL.indexOf("tv.sohu.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+//remove 56.com video ad
+if (document.URL.indexOf("56.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+//fore iqiyi enable html5 player function
+if (document.URL.indexOf("iqiyi.com") >= 0){
+    if (document.cookie.indexOf("player_forcedType=h5_VOD")==-1){
+        document.cookie='player_forcedType=h5_VOD'
+        if(localStorage.reloadTime && Date.now() - parseInt(localStorage.reloadTime)<60000){
+            console.log('no reload')
+        }else{
+            location.reload()
+            localStorage.reloadTime = Date.now();
+        }
+    }
+}
+
+  </script>
+  <style type="text/css">
+    object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}
+  </style>
+</head>
+
+
+<body>
+<!--top-->
+<header class="wp-top">
+  <div class="wp-welcome">
+    <!--<div class="wp-welcome-content">
+      <div class="wp-top-phone_login" id="web_topcontact">系统授权到期，请联系开发人员进行授权。</div>
+    </div>-->
+  </div>
+  <div class="wp-topnav">
+    <div class="wp-topnav-content">
+      <div class="wp-logo"><a href="http://www.ticcollege.com/"> <img
+        src="./image/1_1653275981.gif"></a></div>
+      <nav>
+        <ul class="wp-main-nav">
+          <li><a href="http://www.ticcollege.com/" class="wp-t-fa">首页</a></li>
+          <!--<li><a href="http://www.ticcollege.com/user/login" class="wp-t-fa"><strong
+            style="color:#CF0">注册/登录</strong></a></li>
+          <li><a href="http://www.cntestlab.com/2017/" class="wp-t-fa">往届回顾</a></li>-->
+          <li><a href="http://www.ticcollege.com/contract.html" class="wp-t-fa actived">联系我们</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</header>
+<!--top end-->
+<div class="container-fluid">
+  <div class="row">
+    <div id="banner" class="banner">
+      <div class="hd">
+        <ul>
+          <li class="on"></li>
+
+        </ul>
+      </div>
+      <div class="bd">
+        <ul>
+          <li style="background-image: url(&#39;/uploads/allimg/180525/1_1700418302.jpg&#39;);"></li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+		jQuery(".banner").slide({mainCell:".bd ul",autoPlay:true});
+
+    </script>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<section id="guide">
+  <div class="nav">
+    <div class="container">
+      <ul>
+        <li><a href="http://www.ticcollege.com/meeting.html" class="active"><i class="glyphicon glyphicon-home"></i> 首页</a></li>
+        <!--<li><a href="http://www.ticcollege.com/user/login" class="active"><i class="glyphicon glyphicon-hand-right"></i>
+          登录/报名</a></li>-->
+        <!--<li> <a href="http://www.cntestlab.com/2018/speaker.html"><i class="glyphicon glyphicon-user"></i> 演讲嘉宾</a> </li>-->
+        <li><a href="http://www.ticcollege.com/schedule.html"><i class="glyphicon glyphicon-calendar"></i> 日程安排</a>
+        </li>
+        <!--<li> <a href="http://www.cntestlab.com/2018/show.html"><i class="glyphicon glyphicon-bullhorn"></i> 展览展示</a> </li>-->
+        <li><a href="http://www.ticcollege.com/hotel.html"><i class="glyphicon glyphicon-road"></i> 酒店交通</a></li>
+        <!--<li> <a href="http://www.cntestlab.com/user/guestbook"><i class="glyphicon glyphicon-headphones"></i> 咨询留言</a> </li>-->
+        <li><a href="http://www.ticcollege.com/meeting.docx"><i class="glyphicon glyphicon-link"></i> 会议通知</a></li>
+        <!--<li><a href="http://www.ticcollege.com/user/help" target="_blank"><i class="glyphicon glyphicon-heart"></i> 参会流程</a>
+        </li>-->
+      </ul>
+    </div>
+  </div>
+</section>
+<br>
+<style>
+.alert-success a:hover{
+	text-decoration:none;
+	}
+
+</style>
+<div class="container">
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-lg-12">
+      <div id="introduce">
+        <h3>
+          会议介绍</h3>
+        <p>
+          中国质量人大会是中创国新（北京）科技发展有限公司主办的中国质量领域从业者的专业性年度盛会，将于2019年1月12日在北京举办。</p>
+        <p>
+          会议的核心目标是聚合中国质量工作者，建立知识分享和信息交流的机制，为中国质量工作者和质量技术服务机构传播创新理念和输出有价值的知识，促进质量意识和服务能力在产业链和全社会的交汇融合、互联互通。</p>
+        <p>
+          会议关注的核心主题是“质量人”，即从事与质量相关工作的全体工作者。将从质量工作者个体出发，关注“质量人”的职业发展趋势和机会，分享和交流质量工作者（包括资深学者和中青年领袖）的个人成长经历，展示每一层次的质量人（管理者、中层骨干、基层工作者）对于行业现状和未来的思考，探究中国质量发展的趋势和方向。</p>
+        <p>
+          <strong>一、论坛时间：</strong> 2019年1月12日</p>
+        <p>
+          <strong>二、论坛地点：&nbsp;</strong>北京</p>
+        <p>
+          <strong>三、论坛主题：&nbsp;</strong>看清自己 &nbsp;顺势而为</p>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="1084">
+          <tbody>
+          <tr>
+            <td align="left" height="80" style="border-bottom:2px #25b4f7 solid" valign="bottom" width="226">
+              <div style="display: inline-block;border: 1px solid #25b4f7;border-radius:8px 8px 0 0;color: #fff;cursor: pointer;vertical-align: middle;
+    text-align: center;font-size: 16px;padding: 5px 10px;background-color:#25b4f7; margin: 0 auto; width:90px;">
+                主办单位
+              </div>
+            </td>
+            <td align="left" colspan="2" height="80" style="border-bottom:2px #25b4f7 solid" valign="bottom">
+              <div style="display: inline-block;border: 1px solid #25b4f7;border-radius:8px 8px 0 0;color: #fff;cursor: pointer;vertical-align: middle;
+    text-align: center;font-size: 16px;
+    padding: 5px 10px;background-color:#25b4f7; margin: 0 auto; width:90px;">
+                承办单位
+              </div>
+            </td>
+            <td align="left" colspan="2" height="80" style="border-bottom:2px #25b4f7 solid" valign="bottom">
+              <div style="display: inline-block;border: 1px solid #25b4f7;border-radius:8px 8px 0 0;color: #fff;cursor: pointer;vertical-align: middle;
+    text-align: center;font-size: 16px;padding:5px 10px;background-color:#25b4f7; margin: 0 auto; width:90px;">
+                协办单位
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td align="left" colspan="5" height="20">
+              &nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td align="left" width="226">
+              <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8;border-radius:5px; width:190px;">
+                <a href="http://www.caiq.org.cn/" target="_blank"><img alt=""
+                                                                       src="./image/1334-p8Vyo5tP.jpg"
+                                                                       style="width: 180px;"></a></div>
+            </td>
+            <td align="left" width="226">
+              <div style="padding:5px; border:1px solid #f0e8e8;border-radius:5px;width:190px;">
+                <img alt="" src="./image/1334-KPhDo5tP.jpg" style="width: 180px; "></div>
+            </td>
+            <td align="left" width="226">
+              <div style="padding:5px; border:1px solid #f0e8e8;border-radius:5px;width:190px;">
+                <img alt="" src="./image/1334-c6LDo5tP.jpg" style="width: 180px;"></div>
+            </td>
+            <td align="left" width="226">
+              <div style="padding:5px; border:1px solid #f0e8e8;border-radius:5px;width:190px;">
+                <img alt="" src="./image/1334-UC3Wo5tP.jpg" style="width: 180px;"></div>
+            </td>
+            <td align="left">
+              <div style="padding:5px; border:1px solid #f0e8e8;border-radius:5px;width:190px;">
+                <a href="http://www.woyaoce.cn/" target="_blank"><img alt=""
+                                                                      src="./image/1334-iasXo5tP.jpg"
+                                                                      style="width: 180px;"></a></div>
+            </td>
+          </tr>
+          <tr>
+            <td align="left" height="80" style="border-bottom:2px #25b4f7 solid" valign="bottom">
+              <div style="display: inline-block;border: 1px solid #25b4f7;border-radius:8px 8px 0 0;color: #fff;cursor: pointer;vertical-align: middle;
+    text-align: center;font-size: 16px;padding: 5px 10px;background-color:#25b4f7; margin: 0 auto; width:110px;">
+                首席赞助商
+              </div>
+            </td>
+            <td align="left" height="80" style="border-bottom:2px #25b4f7 solid" valign="bottom">
+              <div style="display: inline-block;border: 1px solid #25b4f7;border-radius:8px 8px 0 0;color: #fff;cursor: pointer;vertical-align: middle;
+    text-align: center;font-size: 16px;padding: 5px 10px;background-color:#25b4f7; margin: 0 auto; width:110px;">
+                钻石赞助商
+              </div>
+            </td>
+            <td align="left" colspan="2" height="80" style="border-bottom:2px #25b4f7 solid" valign="bottom">
+              <div style="display: inline-block;border: 1px solid #25b4f7;border-radius:8px 8px 0 0;color: #fff;cursor: pointer;vertical-align: middle;
+    text-align: center;font-size: 16px;
+    padding: 5px 10px;background-color:#25b4f7; margin: 0 auto; width:110px;">
+                黄金赞助商
+              </div>
+            </td>
+            <td align="left" height="80" style="border-bottom:2px #25b4f7 solid" valign="bottom">
+              &nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td align="left" colspan="5" height="20">
+              &nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td align="left" width="226">
+              <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:190px;">
+                <a href="http://www.xaunqd.com/" target="_blank"><img alt=""
+                                                                      src="./image/1334_0829505011.jpg"
+                                                                      style=" width: 180px;"></a></div>
+            </td>
+            <td align="left" width="226">
+              <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:190px;">
+                <a href="https://www.agilent.com/" target="_blank"><img alt=""
+                                                                        src="./image/1334-lcFdq6tP.jpg"
+                                                                        style=" width: 180px;"></a></div>
+            </td>
+            <td align="left" width="226">
+              <div style="padding:5px; border:1px solid #f0e8e8;border-radius:5px;width:190px;">
+                <a href="https://www.shimadzu.com.cn/" target="_blank"><img alt=""
+                                                                            src="./image/1334-0DXdq6tP.jpg"
+                                                                            style="width: 180px;"></a></div>
+            </td>
+            <td align="left" width="226">
+              <div style="padding:5px; border:1px solid #f0e8e8;border-radius:5px;width:190px;">
+                <a href="https://www.thermofisher.com/cn/zh/home.html" target="_blank"><img alt=""
+                                                                                            src="./image/1334-ykceq6tP.jpg"
+                                                                                            style="width: 180px;"></a>
+              </div>
+            </td>
+            <td align="left">
+              &nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td align="left" colspan="5">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                <tr style="border-bottom:2px #25b4f7 solid">
+                  <td height="80" valign="bottom">
+                    <div style="display: inline-block;border: 1px solid #25b4f7;border-radius:8px 8px 0 0;color: #fff;cursor: pointer;vertical-align: middle;
+    text-align: center;font-size: 16px;padding:5px 10px;background-color:#25b4f7; margin: 0 auto; width:110px;">
+                      白银赞助商
+                    </div>
+                  </td>
+                  <td valign="bottom">
+                    &nbsp;
+                  </td>
+                  <td valign="bottom">
+                    <div style="display: inline-block;border: 1px solid #25b4f7;border-radius:8px 8px 0 0;color: #fff;cursor: pointer;vertical-align: middle;
+    text-align: center;font-size: 16px;
+    padding: 5px 10px;background-color:#25b4f7; margin: 0 auto; width:120px;">
+                      资料袋赞助商
+                    </div>
+                  </td>
+                  <td valign="bottom">
+                    <div style="display: inline-block;border: 1px solid #25b4f7;border-radius:8px 8px 0 0;color: #fff;cursor: pointer;vertical-align: middle;
+    text-align: center;font-size: 16px;padding: 5px 10px;background-color:#25b4f7; margin: 0 auto; width:110px;">
+                      胸卡赞助商
+                    </div>
+                  </td>
+                  <td valign="bottom">
+                    <div style="display: inline-block;border: 1px solid #25b4f7;border-radius:8px 8px 0 0;color: #fff;cursor: pointer;vertical-align: middle;
+    text-align: center;font-size: 16px;padding:5px 10px;background-color:#25b4f7; margin: 0 auto; width:120px;">
+                      大会指定用本
+                    </div>
+                  </td>
+                  <td valign="bottom">
+                    <div style="display: inline-block;border: 1px solid #25b4f7;border-radius:8px 8px 0 0;color: #fff;cursor: pointer;vertical-align: middle;
+    text-align: center;font-size: 16px;padding:5px 10px;background-color:#25b4f7; margin: 0 auto; width:120px;">
+                      大会指定用笔
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="6" height="20">
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="https://sciex.com.cn/" target="_blank"><img alt=""
+                                                                           src="./image/1334-kCgeq6tP.jpg"
+                                                                           style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.genomics.cn/index" target="_blank"><img alt=""
+                                                                                  src="./image/1334_1619066201.jpg"
+                                                                                  style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="https://china.ul.com/" target="_blank"><img alt=""
+                                                                           src="./image/1334_1620074801.jpg"
+                                                                           style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.wellington-china.com/" target="_blank"><img alt=""
+                                                                                      src="./image/1334-Okweq6tP.jpg"
+                                                                                      style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cqyhyq.com/" target="_blank"><img alt=""
+                                                                            src="./image/1334_1651158441.jpg"
+                                                                            style="width: 140px;"></a></div>
+                  </td>
+                  <td>
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="https://www.dekra.com.cn/" target="_blank"><img alt=""
+                                                                               src="./image/1334_1620422061.jpg"
+                                                                               style="width: 140px;"></a></div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="left" colspan="5">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                <tr>
+                  <td align="left" colspan="6" height="80" style="border-bottom:2px #25b4f7 solid" valign="bottom">
+                    <div style="display: inline-block;border: 1px solid #25b4f7;border-radius:8px 8px 0 0;color: #fff;cursor: pointer;vertical-align: middle;
+    text-align: center;font-size: 16px;padding: 5px 10px;background-color:#25b4f7; margin: 0 auto; width:200px;">
+                      参展企业 <font size="-1">（排名不分先后）</font></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="6" height="20">
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.bjhongmeng.com/" target="_blank"><img alt=""
+                                                                                src="./image/1334-oRoXr6tP.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.peakscientific.cn/" target="_blank"><img alt=""
+                                                                                   src="./image/1334-ZfiVr6tP.jpg"
+                                                                                   style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.gbw-china.com/" target="_blank"><img alt=""
+                                                                               src="./image/1334-9TwVr6tP.jpg"
+                                                                               style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.beijinglandbridge.com/" target="_blank"><img alt=""
+                                                                                       src="./image/1334-e81Vr6tP.jpg"
+                                                                                       style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.reeko.cn/" target="_blank"><img alt=""
+                                                                          src="./image/1334-X2rWr6tP.jpg"
+                                                                          style="width: 140px;"></a></div>
+                  </td>
+                  <td>
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="https://www.anton-paar.com/" target="_blank"><img alt=""
+                                                                                 src="./image/1334-M9bVr6tP.jpg"
+                                                                                 style="width: 140px;"></a></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="6" height="20">
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.shankebio.com/" target="_blank"><img alt=""
+                                                                               src="./image/1334-SyCes6tP.jpg"
+                                                                               style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/"><img alt=""
+                                                               src="./image/1334_1743244286.jpg"
+                                                               style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.quceba.com/" target="_blank"><img alt=""
+                                                                            src="./image/1334-s2jfs6tP.jpg"
+                                                                            style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="https://www.lgcstandards.com/" target="_blank"><img alt=""
+                                                                                   src="./image/1334-QVZes6tP.jpg"
+                                                                                   style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.bjbaode.com/" target="_blank"><img alt=""
+                                                                             src="./image/1334-9oefs6tP.jpg"
+                                                                             style="width: 140px;"></a></div>
+                  </td>
+                  <td>
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.eyela.com.cn/" target="_blank"><img alt=""
+                                                                              src="./image/1334_17340080711.jpg"
+                                                                              style="width: 140px;"></a></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="6" height="20">
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.fossparts.cn/" target="_blank"><img alt=""
+                                                                              src="./image/1334_1336303321.jpg"
+                                                                              style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#"><img alt=""
+                                                                src="./image/1334_1336309646.jpg"
+                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#" target="_blank"><img alt=""
+                                                                                src="./image/1334_17404122210.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.spectrum-cn.com/" target="_blank"><img alt=""
+                                                                                 src="./image/1334_1336307118.jpg"
+                                                                                 style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.bjhaiguang.com/" target="_blank"><img alt=""
+                                                                                src="./image/1334_13363076710.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td>
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.etcrpt.com/erpt/" target="_blank"><img alt=""
+                                                                                 src="./image/1334_1743245341.jpg"
+                                                                                 style="width: 140px;"></a></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="6" height="20">
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.hnca.com.cn/" target="_blank"><img alt=""
+                                                                             src="./image/1334_1356475961.jpg"
+                                                                             style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="https://www.zhaowoce.com/" target="_blank"><img alt=""
+                                                                               src="./image/1334_1356479136.jpg"
+                                                                               style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#" target="_blank"><img alt=""
+                                                                                src="./image/1334_1740417769.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.longwi.com/about.html" target="_blank"><img alt=""
+                                                                                      src="./image/1334_1356471088.jpg"
+                                                                                      style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.rephile.cn/" target="_blank"><img alt=""
+                                                                            src="./image/1334_1356471079.jpg"
+                                                                            style="width: 140px;"></a></div>
+                  </td>
+                  <td>
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.leemanchina.cn/" target="_blank"><img alt=""
+                                                                                src="./image/1334_13564768110.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="6" height="20">
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.high-tech.cn/" target="_blank"><img alt=""
+                                                                              src="./image/1334_1405065491.jpg"
+                                                                              style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#"><img alt=""
+                                                                src="./image/1334_1405061836.jpg"
+                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <img alt="" src="./image/1334_0832397821.jpg" style="width: 140px;">
+                    </div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.preekem.com/" target="_blank"><img alt=""
+                                                                             src="./image/1334_1405069588.jpg"
+                                                                             style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.welchmat.com/" target="_blank"><img alt=""
+                                                                              src="./image/1334_1405068769.jpg"
+                                                                              style="width: 140px;"></a></div>
+                  </td>
+                  <td>
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.micro-sep.com/" target="_blank"><img alt=""
+                                                                               src="./image/1334_1425203811.jpg"
+                                                                               style="width: 140px;"></a></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="6" height="20">
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.metrohm.com.cn/" target="_blank"><img alt=""
+                                                                                src="./image/1334_1510582001.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.styc17.com/"><img alt=""
+                                                            src="./image/1334_1510585419.jpg"
+                                                            style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.fpi-inc.com/" target="_blank"><img alt=""
+                                                                             src="./image/1334_1510581686.jpg"
+                                                                             style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.phky.com.cn/" target="_blank"><img alt=""
+                                                                             src="./image/1334_1510588937.jpg"
+                                                                             style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.acslabchem.com/" target="_blank"><img alt=""
+                                                                                src="./image/1334_1510586508.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td>
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cascokits.com/" target="_blank"><img alt=""
+                                                                               src="./image/1334_15105878910.jpg"
+                                                                               style="width: 140px;"></a></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="6" height="20">
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#" target="_blank"><img alt=""
+                                                                                src="./image/1334_1743246857.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.altascientific.cn/"><img alt=""
+                                                                   src="./image/1334_1734008476.jpg"
+                                                                   style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#" target="_blank"><img alt=""
+                                                                                src="./image/1334_1734001837.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#" target="_blank"><img alt=""
+                                                                                src="./image/1334_1734008338.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#" target="_blank"><img alt=""
+                                                                                src="./image/1334_1734005579.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td>
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#" target="_blank"><img alt=""
+                                                                                src="./image/1334_17340038010.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="6" height="20">
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#" target="_blank"><img alt=""
+                                                                                src="./image/1334_17340061312.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#"><img alt=""
+                                                                src="./image/1334_17340037113.jpg"
+                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#" target="_blank"><img alt=""
+                                                                                src="./image/1334_1739062911.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#" target="_blank"><img alt=""
+                                                                                src="./image/1334_1739064736.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#" target="_blank"><img alt=""
+                                                                                src="./image/1334_1739066377.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td>
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#" target="_blank"><img alt=""
+                                                                                src="./image/1334_1739061578.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="6" height="20">
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#" target="_blank"><img alt=""
+                                                                                src="./image/1334_1740418411.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#"><img alt=""
+                                                                src="./image/1334_1740411356.jpg"
+                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#" target="_blank"><img alt=""
+                                                                                src="./image/1334_1740412147.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#" target="_blank"><img alt=""
+                                                                                src="./image/1334_1740417888.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cntestlab.com/#" target="_blank"><img alt=""
+                                                                                src="./image/1334_1703113411.jpg"
+                                                                                style="width: 140px;"></a></div>
+                  </td>
+                  <td>
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="6" height="20">
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td width="196">
+                    &nbsp;
+                  </td>
+                  <td width="196">
+                    &nbsp;
+                  </td>
+                  <td width="196">
+                    &nbsp;
+                  </td>
+                  <td width="196">
+                    &nbsp;
+                  </td>
+                  <td width="196">
+                    &nbsp;
+                  </td>
+                  <td>
+                    &nbsp;
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="left" colspan="5">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                <tr>
+                  <td align="left" colspan="6" height="80" style="border-bottom:2px #25b4f7 solid" valign="bottom">
+                    <div style="display: inline-block;border: 1px solid #25b4f7;border-radius:8px 8px 0 0;color: #fff;cursor: pointer;vertical-align: middle;
+    text-align: center;font-size: 16px;padding: 5px 10px;background-color:#25b4f7; margin: 0 auto; width:200px;">
+                      支持媒体 <font size="-1">（排名不分先后）</font></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="6" height="20">
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.cncete.com/" target="_blank"><img alt=""
+                                                                            src="./image/1334_1624432851.jpg"
+                                                                            style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.instrument.com.cn/" target="_blank"><img alt=""
+                                                                                   src="./image/1334_1625125111.jpg"
+                                                                                   style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.chem17.com/" target="_blank"><img alt=""
+                                                                            src="./image/1334_1625403991.jpg"
+                                                                            style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.antpedia.com/" target="_blank"><img alt=""
+                                                                              src="./image/1334_1626087231.jpg"
+                                                                              style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.17025.org/" target="_blank"><img alt=""
+                                                                           src="./image/1334_1039068881.jpg"
+                                                                           style="width: 140px;"></a></div>
+                  </td>
+                  <td>
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.vantlab.com/" target="_blank"><img alt=""
+                                                                             src="./image/1334_1039291011.jpg"
+                                                                             style="width: 140px;"></a></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="6" height="20">
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="http://www.superlab360.com/" target="_blank"><img alt=""
+                                                                                 src="./image/1334_1040587291.jpg"
+                                                                                 style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    <div style="padding:5px; border-radius:5px;border:1px solid #f0e8e8; width:150px;">
+                      <a href="https://www.zhaowoce.com/" target="_blank"><img alt=""
+                                                                               src="./image/1334_1356479136.jpg"
+                                                                               style="width: 140px;"></a></div>
+                  </td>
+                  <td width="196">
+                    &nbsp;
+                  </td>
+                  <td width="196">
+                    &nbsp;
+                  </td>
+                  <td width="196">
+                    &nbsp;
+                  </td>
+                  <td>
+                    &nbsp;
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <br>
+
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<footer>
+  <div class="wp-footer mt-10">
+    <p style="color:#FFF; font-weight:normal; text-align:center; margin-top:10px; line-height:30px;">
+      <span id="web_botcontact">系统授权到期，请联系开发人员进行授权。</span>
+      <br>
+      Copyright © 2008 - 2018 ticcollege.com <br>
+      All Rights Reserved. 版权所有 京ICP备10019866号-4</p>
+    <div style="width:300px;margin:0 auto; padding:5px 0;">
+      <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502030604"
+         style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
+        src="./image/jgwab.png" style="float:left;">
+        <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备
+          11010502030604号</p></a>
+    </div>
+
+  </div>
+
+</footer>
+<!--<script type="text/javascript">
+ function ainfo(vname){
+      RDATA=$.ajax({url:"/user/ajax?type="+vname,async:false});
+      $("#"+vname).html(RDATA.responseText);
+    }
+    ainfo('web_topcontact');
+    ainfo('web_botcontact');
+
+</script>-->
+<div class="hidden">
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9da8a7b253725bc8bb66a7c986b71cc4";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+
+  </script>
+</div>
+
+</body>
+</html>
